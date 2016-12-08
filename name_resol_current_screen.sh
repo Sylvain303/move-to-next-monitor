@@ -2,10 +2,13 @@
 # from: http://superuser.com/questions/603528/how-to-get-the-current-monitor-resolution-or-monitor-name-lvds-vga1-etc
 
 ## Get screen info
-screen1=($(xrandr | grep -w connected  | awk -F'[ +]' '{print $1,$3,$4}' | 
-    head -n 1))
-screen2=($(xrandr | grep -w connected  | awk -F'[ +]' '{print $1,$3,$4}' | 
-    tail -n 1))
+## displays
+#LVDS-1 connected primary 1366x768+0+418 (normal left inverted right x axis y axis) 309mm x 174mm
+#VGA-1 connected 1280x1024+1366+0 (normal left inverted right x axis y axis) 376mm x 301mm
+screen1=($(xrandr | awk -F'[ +]' '/ connected / {print $1,$3,$4}' | head -n 1))
+screen2=($(xrandr | awk -F'[ +]' '/ connected / {print $1,$3,$4}' | tail -n 1))
+
+# there's a primary keyword on the 'first' monitor…
 
 ## Figure out which screen is to the right of which
 if [ ${screen1[2]} -eq 0  ]
@@ -15,7 +18,6 @@ then
 else
     right=(${screen1[@]});
     left=(${screen2[@]});
-
 fi
 
 ## Get window position
