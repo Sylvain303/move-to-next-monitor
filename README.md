@@ -1,6 +1,6 @@
 # move-to-next-monitor
 
-Script to move windows from one monitor to the next in Xubuntu
+Script to move windows from one monitor to the next one in Xubuntu.
 
 Even though I don't use Xubuntu anymore, people are still interested
 in this script. Sweet! Glad it can help others.
@@ -21,27 +21,49 @@ move the active window to the next monitor
 ```
 move-to-next-monitor
 ```
-move the given window_id
+
+## Features and TODO
+
+Handle multii-screen loop.
+Handle screen offset and different size.
+
+![doc/screenshot_monitor.png](doc/screenshot_monitor.png)
+
+## Internal
+
+You can source the bash script in your current shell and call functions:
+
+(when sourced nothing is excuted)
 ```
-move-to-next-monitor $window_id
+source move-to-next-monitor
 ```
 
-show computed move coordinate of the given window_id
+show computed move coordinate of the given `window_id`
 ```
-move-to-next-monitor show_move $window_id
-```
-
-move the given window_id to the given monitor
-```
-move-to-next-monitor $window_id $monitor
+window_id=$(get_current_window)
+window_compute_move $window_id
 ```
 
-list detected monitor
+get window postions (x y width height)
 ```
-move-to-next-monitor list_monitors
+window_get_position $window_id
+```
+
+move the given `window_id`
+```
+new_coord=( $(window_compute_move $window_id) )
+echo ${new_coord[@]}
+xdotool windowmove $window_id ${new_coord[0]} ${new_coord[1]}
+```
+
+list detected monitors
+```
+get_monitors
 ```
 
 ## LICENSE
+
+GPL V3
 
 ## Code of Conduct
 
