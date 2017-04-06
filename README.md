@@ -72,10 +72,11 @@ GPL V3
 
 ## Support
 
-Since I don't use Xubuntu and therefore don't have a way to test changes, I'm going to rely on others to QA and give me feedback.
+Create issues.
 
 ## Thanks
 
+* [jc00ke](https://github.com/jc00ke)
 * [icyrock](http://icyrock.com/blog/2012/05/xubuntu-moving-windows-between-monitors/) post for initial development
 * [@jordansissel](https://github.com/jordansissel) for his excellent [xdotool](https://github.com/jordansissel/xdotool)
 
