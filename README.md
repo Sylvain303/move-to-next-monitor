@@ -1,19 +1,13 @@
 # move-to-next-monitor
 
-Script to move windows from one monitor to the next in Xubuntu
+Script to move windows from one monitor to the next in Xubuntu.
 
-Even though I don't use Xubuntu anymore, people are still interested
-in this script. Sweet! Glad it can help others.
+This is a fork from: https://github.com/jc00ke/move-to-next-monitor
 
-I mapped `ctrl+alt+n` to exectute this script.
+Look at the branch for up to date version:
 
-## Usage
+[center-screen-offset](https://github.com/Sylvain303/move-to-next-monitor/tree/center-screen-offset)
 
-```
-wget https://raw.githubusercontent.com/jc00ke/move-to-next-monitor/master/move-to-next-monitor
-chmod +x move-to-next-monitor
-mv move-to-next-monitor /somewhere/in/your/$PATH
-```
 
 ## Code of Conduct
 
@@ -21,9 +15,10 @@ mv move-to-next-monitor /somewhere/in/your/$PATH
 
 ## Support
 
-Since I don't use Xubuntu and therefore don't have a way to test changes, I'm going to rely on others to QA and give me feedback.
+Create tickets here, original version no more maintained.
 
 ## Thanks
 
+* [jc00ke](https://github.com/jc00ke)
 * [icyrock](http://icyrock.com/blog/2012/05/xubuntu-moving-windows-between-monitors/) post for initial development
 * [@jordansissel](https://github.com/jordansissel) for his excellent [xdotool](https://github.com/jordansissel/xdotool)
