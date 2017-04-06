@@ -2,17 +2,18 @@
 
 Script to move windows from one monitor to the next one in Xubuntu.
 
-Even though I don't use Xubuntu anymore, people are still interested
-in this script. Sweet! Glad it can help others.
-
-I mapped `ctrl+alt+n` to exectute this script.
+I mapped `ctrl+space` to exectute this script.
 
 ## Install
 
+`install.sh` will run `sudo apt install` to fetch related package. Look at the
+code to check what will be installed.
+
 ```
-wget https://raw.githubusercontent.com/jc00ke/move-to-next-monitor/master/move-to-next-monitor
-chmod +x move-to-next-monitor
-mv move-to-next-monitor /somewhere/in/your/$PATH
+git clone https://github.com/Sylvain303/move-to-next-monitor.git -b center-screen-offset
+cd move-to-next-monitor
+# it uses ~/bin to symlink it to this dir
+./install.sh
 ```
 
 ## Usage
